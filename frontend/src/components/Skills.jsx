@@ -64,19 +64,11 @@ const Skills = () => {
               Database Systems
             </h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {skillsData.databases.map((db, index) => (
-              <div key={index} className="bg-[#121212] border border-white/25 p-6">
-                <div className="flex justify-between items-center mb-4">
-                  <h4 className="text-white text-xl font-semibold">{db.name}</h4>
-                  <span className="text-purple-600 text-lg font-medium">{db.level}%</span>
-                </div>
-                <div className="w-full bg-white/10 h-2">
-                  <div
-                    className="bg-purple-600 h-full transition-all duration-1000"
-                    style={{ width: `${db.level}%` }}
-                  ></div>
-                </div>
+              <div key={index} className="bg-[#121212] border border-white/25 p-6 transition-all duration-400 hover:border-purple-600 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.2)]">
+                <h4 className="text-white text-xl font-semibold mb-3">{db.name}</h4>
+                <p className="text-white/70 text-base">{db.description}</p>
               </div>
             ))}
           </div>
