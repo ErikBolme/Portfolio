@@ -25,20 +25,11 @@ const Skills = () => {
               Programming Languages
             </h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {skillsData.programmingLanguages.map((lang, index) => (
-              <div key={index} className="bg-[#121212] border border-white/25 p-6">
-                <div className="flex justify-between items-center mb-4">
-                  <h4 className="text-white text-xl font-semibold">{lang.name}</h4>
-                  <span className="text-purple-600 text-lg font-medium">{lang.level}%</span>
-                </div>
-                <div className="w-full bg-white/10 h-2 mb-4">
-                  <div
-                    className="bg-purple-600 h-full transition-all duration-1000"
-                    style={{ width: `${lang.level}%` }}
-                  ></div>
-                </div>
-                <p className="text-white/60 text-sm">{lang.description}</p>
+              <div key={index} className="bg-[#121212] border border-white/25 p-6 transition-all duration-400 hover:border-purple-600 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.2)]">
+                <h4 className="text-white text-xl font-semibold mb-3">{lang.name}</h4>
+                <p className="text-white/70 text-base">{lang.description}</p>
               </div>
             ))}
           </div>
