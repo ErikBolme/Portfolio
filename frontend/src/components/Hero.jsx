@@ -109,22 +109,6 @@ const Hero = () => {
             <span>Contact Me</span>
           </button>
         </div>
-
-        {/* Stats */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-          <div className="text-center">
-            <div className="text-purple-600 text-4xl font-semibold mb-2">2nd</div>
-            <div className="text-white/60 text-sm uppercase tracking-wider">Year Student</div>
-          </div>
-          <div className="text-center">
-            <div className="text-purple-600 text-4xl font-semibold mb-2">7+</div>
-            <div className="text-white/60 text-sm uppercase tracking-wider">Security Tools</div>
-          </div>
-          <div className="text-center">
-            <div className="text-purple-600 text-4xl font-semibold mb-2">100%</div>
-            <div className="text-white/60 text-sm uppercase tracking-wider">Ethical Focus</div>
-          </div>
-        </div>
       </div>
     </section>
   );
