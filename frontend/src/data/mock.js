@@ -24,9 +24,9 @@ export const aboutData = {
 
 export const skillsData = {
   programmingLanguages: [
-    { name: "Python", level: 75, description: "Scripting, automation, security tools" },
-    { name: "JavaScript", level: 65, description: "Web security, XSS analysis" },
-    { name: "Java", level: 60, description: "Application development" }
+    { name: "Python", description: "Scripting, automation, security tools" },
+    { name: "JavaScript", description: "Web security, XSS analysis" },
+    { name: "Java", description: "Application development" }
   ],
   securityTools: [
     { name: "Kali Linux", category: "OS" },
@@ -38,7 +38,7 @@ export const skillsData = {
     { name: "Nessus", category: "Vulnerability Scanning" }
   ],
   databases: [
-    { name: "MySQL", level: 70 }
+    { name: "MySQL", description: "Database design and management" }
   ],
   frameworks: [
     { name: "MITRE ATT&CK", description: "Threat modeling and analysis" },
