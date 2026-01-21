@@ -3,7 +3,7 @@ import { Shield, Lock, Users, FileCheck } from 'lucide-react';
 
 const MilitaryExperience = () => {
   return (
-    <section className="min-h-screen bg-black py-24 px-[7.6923%]">
+    <section id="military-experience" className="min-h-screen bg-black py-24 px-[7.6923%]">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
