@@ -24,7 +24,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-black py-24 px-[7.6923%]">
+    <section id="projects" className="min-h-screen bg-black py-24 px-[7.6923%]">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
