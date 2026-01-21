@@ -35,11 +35,13 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-[7.6923%] text-center">
-        {/* Shield Icon */}
+        {/* Logo Image */}
         <div className="flex justify-center mb-8 animate-fade-in">
-          <div className="p-6 bg-purple-600/10 border-2 border-purple-600 inline-block">
-            <Shield size={64} className="text-purple-600" strokeWidth={1.5} />
-          </div>
+          <img
+            src="https://customer-assets.emergentagent.com/job_secdevjourney/artifacts/h3g8fjtd_Under%20header%20logo.png"
+            alt="Cybersecurity Logo"
+            className="h-32 w-auto object-contain"
+          />
         </div>
 
         {/* Name */}
