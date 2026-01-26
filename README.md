@@ -2,6 +2,8 @@
 
 A professional portfolio website showcasing my journey in cybersecurity, technical skills, and professional experience.
 
+Live site: https://portfolio-six-jade-898u5xny3z.vercel.app
+
 ## 🎯 About
 
 I'm a Cybersecurity student at Høyskolen Kristiania, Bergen, with a strong foundation in information security from my experience as an Information Manager in the Norwegian Armed Forces. This portfolio demonstrates my technical competencies and commitment to ethical hacking principles.
