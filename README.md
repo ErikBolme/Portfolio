@@ -54,24 +54,6 @@ I'm a Cybersecurity student at Høyskolen Kristiania, Bergen, with a strong foun
 - Python 3.9+
 - MongoDB (for backend functionality)
 
-### Frontend Development
-```bash
-cd frontend
-yarn install
-yarn start
-```
-
-Frontend will run on `http://localhost:3000`
-
-### Backend Development
-```bash
-cd backend
-pip install -r requirements.txt
-uvicorn server:app --reload --host 0.0.0.0 --port 8001
-```
-
-Backend will run on `http://localhost:8001`
-
 ## 🎨 Design Philosophy
 
 - **Dark Theme**: Professional cybersecurity aesthetic
