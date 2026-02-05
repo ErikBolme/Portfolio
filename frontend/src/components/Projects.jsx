@@ -11,7 +11,7 @@ const Projects = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-white text-5xl font-semibold mb-4" style={{ fontFamily: 'monospace', letterSpacing: '-0.02em' }}>
-            Projects
+            Active Security Projects
           </h2>
           <div className="w-20 h-1 bg-purple-600 mx-auto"></div>
         </div>
@@ -23,8 +23,7 @@ const Projects = () => {
             <div>
               <h4 className="text-white text-xl font-semibold mb-3">Ethical Hacking Commitment</h4>
               <p className="text-white/70 text-lg leading-relaxed">
-                All security research and penetration testing conducted within legal boundaries and ethical guidelines. 
-                Focused on responsible disclosure and system improvement.
+                All activities are conducted within legal boundaries and ethical guidelines.
               </p>
             </div>
           </div>
@@ -36,12 +35,12 @@ const Projects = () => {
             <div className="mb-8">
               <Code size={64} className="text-purple-600 mx-auto mb-6" strokeWidth={1.5} />
               <p className="text-white/85 text-xl leading-relaxed mb-8">
-                Security labs, penetration testing projects, and technical documentation available on GitHub.
+                Security projects and technical documentation available on GitHub.
               </p>
             </div>
             
             {/* GitHub Button */}
-            
+            <a
               href="https://github.com/ErikBolme"
               target="_blank"
               rel="noopener noreferrer"
@@ -49,7 +48,7 @@ const Projects = () => {
               style={{ fontFamily: 'monospace' }}
             >
               <Github size={32} strokeWidth={2} className="group-hover:rotate-12 transition-transform duration-400" />
-              <span>View GitHub Profile</span>
+              <span>View My GitHub Profile</span>
             </a>
 
             {/* Subtle decoration */}
@@ -86,7 +85,7 @@ const Projects = () => {
                       {project.description}
                     </p>
                     <div className="flex justify-center">
-                      
+                      <a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
