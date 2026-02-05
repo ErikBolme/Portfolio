@@ -91,23 +91,6 @@ const Skills = () => {
             ))}
           </div>
         </div>
-
-        {/* Security Focus Keywords */}
-        <div>
-          <h3 className="text-white text-3xl font-semibold mb-8" style={{ letterSpacing: '-0.01em' }}>
-            Key Security Competencies
-          </h3>
-          <div className="flex flex-wrap gap-3">
-            {skillsData.securityFocus.map((focus, index) => (
-              <span
-                key={index}
-                className="px-6 py-3 bg-purple-600/10 border border-purple-600 text-purple-600 text-base font-medium transition-all duration-400 hover:bg-purple-600 hover:text-black cursor-default"
-              >
-                {focus}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
