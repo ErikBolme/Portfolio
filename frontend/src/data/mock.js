@@ -2,9 +2,8 @@
 
 export const profileData = {
   name: "Erik Helander Bolme",
-  title: "Cybersecurity Student & Ethical Hacker",
+  title: "Cybersecurity & Ethical Hacker",
   tagline: "SECURING THE DIGITAL WORLD",
-  bio: "Bachelor student in Cybersecurity at Høyskolen Kristiania with a passion for ethical hacking, penetration testing, and security research.",
   github: "https://github.com/ErikBolme",
   email: "erikbolme@hotmail.com",
   location: "Bergen, Norway"
