@@ -7,32 +7,13 @@
 
 # Dependencies
 node_modules/
-yarn.lock
 package-lock.json
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-ENV/
-.venv
-
-# Testing
-coverage/
-.nyc_output
-.pytest_cache/
-test_result.md
 
 # Build outputs
 build/
 dist/
-*.egg-info/
 
-# IDEs
+# IDEs & editors
 .vscode/
 .idea/
 *.swp
@@ -49,14 +30,10 @@ yarn-error.log*
 
 # Cache
 .cache/
-.ruff_cache/
 .eslintcache
 
 # System files
 Thumbs.db
-
-# Emergent specific
-.emergent/
 
 # Temporary files
 *.tmp
