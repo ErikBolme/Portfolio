@@ -81,17 +81,6 @@ const Hero = () => {
           {profileData.tagline}
         </p>
 
-        {/* Bio */}
-        <p
-          className="text-white/70 max-w-3xl mx-auto mb-12 animate-fade-in-up"
-          style={{
-            fontSize: '20px',
-            lineHeight: '1.6',
-            animationDelay: '0.3s'
-          }}
-        >
-          {profileData.bio}
-        </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
