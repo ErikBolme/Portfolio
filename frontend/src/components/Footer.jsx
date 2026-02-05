@@ -23,7 +23,7 @@ const Footer = () => {
               {profileData.name.split(' ')[0]}
             </h3>
             <p className="text-white/60 text-base leading-relaxed">
-              Cybersecurity student passionate about ethical hacking and security research.
+              Passionate about ethical hacking and security research.
             </p>
           </div>
 
