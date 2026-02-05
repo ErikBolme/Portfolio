@@ -88,25 +88,3 @@
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
-```
-
----
-
-### **Steg 3: Commit endringen**
-
-1. Scroll ned
-2. I "Commit message", skriv:
-```
-   Fix: Replace CRACO with react-scripts
-```
-3. Klikk **"Commit changes"**
-
----
-
-### **Steg 4: Fjern craco.config.js (hvis den fortsatt finnes)**
-
-1. Gå til `frontend/craco.config.js` på GitHub
-2. Klikk på **søppelbøtte-ikonet** (Delete this file) øverst til høyre
-3. Commit message:
-```
-   Remove craco.config.js
