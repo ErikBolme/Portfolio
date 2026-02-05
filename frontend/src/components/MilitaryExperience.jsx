@@ -8,7 +8,7 @@ const MilitaryExperience = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-white text-5xl font-semibold mb-4" style={{ fontFamily: 'monospace', letterSpacing: '-0.02em' }}>
-            Professional Foundation: Security & Information Management
+            Military Background
           </h2>
           <div className="w-20 h-1 bg-purple-600 mx-auto"></div>
         </div>
@@ -19,13 +19,13 @@ const MilitaryExperience = () => {
           <div className="order-2 lg:order-1">
             <div className="bg-[#121212] border border-white/25 p-8">
               <p className="text-white/85 text-lg leading-relaxed mb-6">
-                My journey into cybersecurity began with a strong foundation in the Norwegian Armed Forces. As an <span className="text-purple-600 font-semibold">Information Manager (IM)</span>, I was responsible for establishing digital collaboration platforms and managing information flow under strict security requirements.
+                <span className="text-purple-600 font-semibold">Information Manager (IM)</span>, Norwegian Armed Forces
               </p>
               <p className="text-white/85 text-lg leading-relaxed mb-6">
-                I gained hands-on experience with <span className="text-purple-600 font-semibold">Role-Based Access Control (RBAC)</span>, managing access levels from Reader to Owner, and ensuring security compliance within staff environments.
+                Managed digital collaboration platforms and information flow under military security standards. Handled <span className="text-purple-600 font-semibold">Role-Based Access Control (RBAC)</span> from Reader to Owner level.
               </p>
               <p className="text-white/85 text-lg leading-relaxed">
-                A critical part of my role involved security procedures for high-security encrypted rooms, which instilled in me a disciplined approach to information governance and digital defense.
+                Operated in high-security encrypted environments following strict protocols for information governance and access management.
               </p>
             </div>
 
@@ -34,22 +34,22 @@ const MilitaryExperience = () => {
               <div className="bg-purple-600/10 border border-purple-600/30 p-4 transition-all duration-400 hover:bg-purple-600/20">
                 <Lock size={24} className="text-purple-600 mb-2" strokeWidth={1.5} />
                 <h4 className="text-white text-sm font-semibold mb-1">Access Control</h4>
-                <p className="text-white/60 text-xs">RBAC Management</p>
+                <p className="text-white/60 text-xs">RBAC Systems</p>
               </div>
               <div className="bg-purple-600/10 border border-purple-600/30 p-4 transition-all duration-400 hover:bg-purple-600/20">
                 <Shield size={24} className="text-purple-600 mb-2" strokeWidth={1.5} />
                 <h4 className="text-white text-sm font-semibold mb-1">Security Compliance</h4>
-                <p className="text-white/60 text-xs">High-Security Protocols</p>
+                <p className="text-white/60 text-xs">Military Standards</p>
               </div>
               <div className="bg-purple-600/10 border border-purple-600/30 p-4 transition-all duration-400 hover:bg-purple-600/20">
                 <FileCheck size={24} className="text-purple-600 mb-2" strokeWidth={1.5} />
-                <h4 className="text-white text-sm font-semibold mb-1">Information Flow</h4>
-                <p className="text-white/60 text-xs">Document Management</p>
+                <h4 className="text-white text-sm font-semibold mb-1">Information Management</h4>
+                <p className="text-white/60 text-xs">Document Control</p>
               </div>
               <div className="bg-purple-600/10 border border-purple-600/30 p-4 transition-all duration-400 hover:bg-purple-600/20">
                 <Users size={24} className="text-purple-600 mb-2" strokeWidth={1.5} />
-                <h4 className="text-white text-sm font-semibold mb-1">Team Leadership</h4>
-                <p className="text-white/60 text-xs">Training & Mentoring</p>
+                <h4 className="text-white text-sm font-semibold mb-1">Platform Administration</h4>
+                <p className="text-white/60 text-xs">Staff Support</p>
               </div>
             </div>
           </div>
