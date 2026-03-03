@@ -53,9 +53,6 @@ lerna-debug.log*
 ehthumbs.db
 Thumbs.db
 
-# AI editor files
-craco.config.js
-
 # Deployment
 .vercel
 .netlify
