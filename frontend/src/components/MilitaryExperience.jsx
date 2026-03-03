@@ -1,11 +1,19 @@
 import React from 'react';
 import { Shield, Lock, Users, FileCheck } from 'lucide-react';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const MilitaryExperience = () => {
+  const [headerRef, headerVisible] = useScrollAnimation();
+  const [leftRef, leftVisible] = useScrollAnimation();
+  const [rightRef, rightVisible] = useScrollAnimation();
+
   return (
-    <section id="military-experience" className="min-h-screen bg-black py-24 px-[7.6923%]">
+    <section id="military-experience" className="bg-black py-20 px-[7.6923%]">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div
+          ref={headerRef}
+          className={`text-center mb-14 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
+        >
           <h2 className="text-white text-5xl font-semibold mb-4" style={{ fontFamily: 'monospace', letterSpacing: '-0.02em' }}>
             Military Background
           </h2>
@@ -13,7 +21,10 @@ const MilitaryExperience = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
+          <div
+            ref={leftRef}
+            className={`order-2 lg:order-1 ${leftVisible ? 'scroll-visible-left' : 'scroll-hidden-left'}`}
+          >
             <div className="bg-[#121212] border border-white/25 p-8">
               <p className="text-white/85 text-lg leading-relaxed mb-6">
                 <span className="text-purple-600 font-semibold">Information Manager (IM)</span>, Norwegian Armed Forces
@@ -50,7 +61,10 @@ const MilitaryExperience = () => {
             </div>
           </div>
 
-          <div className="order-1 lg:order-2">
+          <div
+            ref={rightRef}
+            className={`order-1 lg:order-2 ${rightVisible ? 'scroll-visible-right' : 'scroll-hidden-right'}`}
+          >
             <div className="relative">
               <div className="absolute inset-0 bg-purple-600/20 blur-xl"></div>
               <img
