@@ -38,7 +38,7 @@ const Hero = () => {
         {/* Logo Image */}
         <div className="flex justify-center mb-8 animate-fade-in">
           <img
-            src="https://customer-assets.emergentagent.com/job_secdevjourney/artifacts/h3g8fjtd_Under%20header%20logo.png"
+            src="/logo.png"
             alt="Cybersecurity Logo"
             className="h-32 w-auto object-contain"
           />
