@@ -3,7 +3,7 @@ import { aboutData } from '../data/mock';
 
 const About = () => {
   return (
-    <section id="about" className="min-h-screen bg-black py-24 px-[7.6923%]">
+    <section id="about" className="bg-black py-24 px-[7.6923%]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-white text-5xl font-semibold mb-4" style={{ letterSpacing: '-0.02em' }}>
