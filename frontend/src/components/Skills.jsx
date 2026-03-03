@@ -26,8 +26,14 @@ const Skills = () => {
   const [headerRef, headerVisible] = useScrollAnimation();
 
   return (
-    <section id="skills" className="bg-black py-20 px-[7.6923%]">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="relative py-20 px-[7.6923%] overflow-hidden" style={{ background: '#080808' }}>
+      {/* Purple accent glow - center top */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] opacity-20 pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse, rgba(139,92,246,0.12) 0%, transparent 70%)' }}
+      />
+
+      <div className="relative max-w-6xl mx-auto">
         <div
           ref={headerRef}
           className={`text-center mb-14 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
@@ -44,7 +50,7 @@ const Skills = () => {
         <SkillSection icon={Code} title="Programming Languages">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {skillsData.programmingLanguages.map((lang, index) => (
-              <div key={index} className="bg-[#121212] border border-white/25 p-6 transition-all duration-400 hover:border-purple-600 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.2)]">
+              <div key={index} className="bg-[#111111] border border-white/10 p-6 transition-all duration-400 hover:border-purple-600/50 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.15)]">
                 <h4 className="text-white text-xl font-semibold mb-3">{lang.name}</h4>
                 <p className="text-white/70 text-base">{lang.description}</p>
               </div>
@@ -57,7 +63,7 @@ const Skills = () => {
             {skillsData.securityTools.map((tool, index) => (
               <div
                 key={index}
-                className="bg-[#121212] border border-white/25 p-5 transition-all duration-400 hover:border-purple-600 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.2)]"
+                className="bg-[#111111] border border-white/10 p-5 transition-all duration-400 hover:border-purple-600/50 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.15)]"
               >
                 <h4 className="text-white text-lg font-medium mb-2">{tool.name}</h4>
                 <p className="text-purple-600 text-sm font-normal">{tool.category}</p>
@@ -69,7 +75,7 @@ const Skills = () => {
         <SkillSection icon={Database} title="Database Systems">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {skillsData.databases.map((db, index) => (
-              <div key={index} className="bg-[#121212] border border-white/25 p-6 transition-all duration-400 hover:border-purple-600 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.2)]">
+              <div key={index} className="bg-[#111111] border border-white/10 p-6 transition-all duration-400 hover:border-purple-600/50 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.15)]">
                 <h4 className="text-white text-xl font-semibold mb-3">{db.name}</h4>
                 <p className="text-white/70 text-base">{db.description}</p>
               </div>
@@ -80,7 +86,7 @@ const Skills = () => {
         <SkillSection icon={Activity} title="Frameworks & Methodologies">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {skillsData.frameworks.map((framework, index) => (
-              <div key={index} className="bg-[#121212] border border-white/25 p-6">
+              <div key={index} className="bg-[#111111] border border-white/10 p-6 transition-all duration-400 hover:border-purple-600/50 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.15)]">
                 <h4 className="text-white text-xl font-semibold mb-3">{framework.name}</h4>
                 <p className="text-white/70 text-base">{framework.description}</p>
               </div>
