@@ -13,7 +13,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black border-t border-white/25 py-12 px-[7.6923%]">
+    <footer className="bg-black border-t border-white/10 py-12 px-[7.6923%]">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
@@ -56,14 +56,14 @@ const Footer = () => {
                 href={profileData.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-white/10 border border-white/25 text-white hover:bg-purple-600 hover:border-purple-600 transition-all duration-400"
+                className="p-3 bg-white/5 border border-white/10 text-white hover:bg-purple-600 hover:border-purple-600 transition-all duration-400"
                 aria-label="GitHub"
               >
                 <Github size={24} strokeWidth={1.5} />
               </a>
               <a
                 href={`mailto:${profileData.email}`}
-                className="p-3 bg-white/10 border border-white/25 text-white hover:bg-purple-600 hover:border-purple-600 transition-all duration-400"
+                className="p-3 bg-white/5 border border-white/10 text-white hover:bg-purple-600 hover:border-purple-600 transition-all duration-400"
                 aria-label="Email"
               >
                 <Mail size={24} strokeWidth={1.5} />
@@ -72,7 +72,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/25 my-8"></div>
+        <div className="border-t border-white/10 my-8"></div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/60 text-sm">
