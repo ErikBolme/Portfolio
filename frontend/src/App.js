@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import SectionDivider from './components/SectionDivider';
 import About from './components/About';
 import MilitaryExperience from './components/MilitaryExperience';
 import Skills from './components/Skills';
@@ -16,10 +17,15 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <SectionDivider />
         <About />
+        <SectionDivider flip />
         <MilitaryExperience />
+        <SectionDivider />
         <Skills />
+        <SectionDivider flip />
         <Projects />
+        <SectionDivider />
         <Contact />
       </main>
       <Footer />
