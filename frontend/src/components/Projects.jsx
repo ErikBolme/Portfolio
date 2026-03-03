@@ -9,8 +9,14 @@ const Projects = () => {
   const projects = [];
 
   return (
-    <section id="projects" className="bg-black py-20 px-[7.6923%]">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="relative bg-black py-20 px-[7.6923%] overflow-hidden">
+      {/* Purple accent glow - left side */}
+      <div
+        className="absolute top-1/3 left-0 w-[400px] h-[400px] opacity-20 pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 70%)' }}
+      />
+
+      <div className="relative max-w-6xl mx-auto">
         <div
           ref={headerRef}
           className={`text-center mb-14 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
@@ -40,7 +46,7 @@ const Projects = () => {
           ref={ctaRef}
           className={`max-w-4xl mx-auto ${ctaVisible ? 'scroll-visible-scale' : 'scroll-hidden-scale'}`}
         >
-          <div className="bg-[#121212] border border-white/25 p-12 text-center">
+          <div className="bg-[#111111] border border-white/10 p-12 text-center transition-all duration-500 hover:border-purple-600/30">
             <div className="mb-8">
               <Code size={64} className="text-purple-600 mx-auto mb-6" strokeWidth={1.5} />
               <p className="text-white/85 text-xl leading-relaxed mb-8">
@@ -77,7 +83,7 @@ const Projects = () => {
                 return (
                   <div
                     key={index}
-                    className="bg-[#121212] border border-white/25 p-8 transition-all duration-400 hover:border-purple-600 hover:translate-y-[-4px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.2)] group"
+                    className="bg-[#111111] border border-white/10 p-8 transition-all duration-400 hover:border-purple-600/50 hover:translate-y-[-4px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.15)] group"
                   >
                     <div className="mb-6 flex justify-center">
                       <div className="p-4 bg-purple-600/10 border border-purple-600 transition-all duration-400 group-hover:bg-purple-600/20">
