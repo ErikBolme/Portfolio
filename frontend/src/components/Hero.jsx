@@ -1,19 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, Mail } from 'lucide-react';
 import { profileData } from '../data/mock';
 
 const Hero = () => {
+  const [displayText, setDisplayText] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
+  const fullText = profileData.title;
+
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index <= fullText.length) {
+        setDisplayText(fullText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(timer);
+        setTimeout(() => setShowCursor(false), 2000);
+      }
+    }, 60);
+
+    return () => clearInterval(timer);
+  }, [fullText]);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     }
   };
 
@@ -53,19 +68,21 @@ const Hero = () => {
         </h1>
 
         <h2
-          className="text-white/85 font-medium mb-6 animate-fade-in-up"
+          className="text-white/85 font-medium mb-6"
           style={{
             fontSize: 'clamp(24px, 4vw, 32px)',
             lineHeight: '1.25',
             letterSpacing: '-0.01em',
-            animationDelay: '0.1s'
+            minHeight: 'clamp(30px, 5vw, 40px)'
           }}
         >
-          {profileData.title}
+          <span className={showCursor ? 'typing-cursor' : ''}>
+            {displayText}
+          </span>
         </h2>
 
         <p
-          className="text-purple-600 font-semibold tracking-wider mb-8 animate-fade-in-up"
+          className="text-purple-600 font-semibold tracking-wider mb-10 animate-fade-in-up"
           style={{
             fontSize: '20px',
             letterSpacing: '0.15em',
