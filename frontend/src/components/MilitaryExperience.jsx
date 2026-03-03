@@ -59,7 +59,7 @@ const MilitaryExperience = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-purple-600/20 blur-xl"></div>
               <img
-                src="https://customer-assets.emergentagent.com/job_secdevjourney/artifacts/m9arzg32_Forsvars%20bilde%20av%20meg.jpg"
+                src="/military.jpg"
                 alt="Erik Helander Bolme - Norwegian Armed Forces"
                 className="relative w-full h-auto border-2 border-purple-600 shadow-[0_0_40px_rgba(139,92,246,0.4)] transition-all duration-400 hover:shadow-[0_0_60px_rgba(139,92,246,0.6)]"
               />
