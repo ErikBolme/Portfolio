@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { Mail, Github, MapPin, Send, CheckCircle } from 'lucide-react';
 import { profileData } from '../data/mock';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const Contact = () => {
+  const [headerRef, headerVisible] = useScrollAnimation();
+  const [leftRef, leftVisible] = useScrollAnimation();
+  const [rightRef, rightVisible] = useScrollAnimation();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,9 +34,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-black py-24 px-[7.6923%]">
+    <section id="contact" className="bg-black py-20 px-[7.6923%]">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div
+          ref={headerRef}
+          className={`text-center mb-14 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
+        >
           <h2 className="text-white text-5xl font-semibold mb-4" style={{ letterSpacing: '-0.02em' }}>
             Get In Touch
           </h2>
@@ -42,7 +50,10 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
+          <div
+            ref={leftRef}
+            className={leftVisible ? 'scroll-visible-left' : 'scroll-hidden-left'}
+          >
             <h3 className="text-white text-3xl font-semibold mb-8" style={{ letterSpacing: '-0.01em' }}>
               Connect With Me
             </h3>
@@ -106,7 +117,10 @@ const Contact = () => {
             </div>
           </div>
 
-          <div>
+          <div
+            ref={rightRef}
+            className={rightVisible ? 'scroll-visible-right' : 'scroll-hidden-right'}
+          >
             <h3 className="text-white text-3xl font-semibold mb-8" style={{ letterSpacing: '-0.01em' }}>
               Send a Message
             </h3>
@@ -120,71 +134,34 @@ const Contact = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-white text-base font-medium mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
+                  <label htmlFor="name" className="block text-white text-base font-medium mb-2">Name</label>
+                  <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required
                     className="w-full bg-[#121212] border border-white/25 text-white px-4 py-3 text-lg focus:outline-none focus:border-purple-600 transition-colors duration-300"
-                    placeholder="Your Name"
-                  />
+                    placeholder="Your Name" />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-white text-base font-medium mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
+                  <label htmlFor="email" className="block text-white text-base font-medium mb-2">Email</label>
+                  <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required
                     className="w-full bg-[#121212] border border-white/25 text-white px-4 py-3 text-lg focus:outline-none focus:border-purple-600 transition-colors duration-300"
-                    placeholder="your.email@example.com"
-                  />
+                    placeholder="your.email@example.com" />
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-white text-base font-medium mb-2">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
+                  <label htmlFor="subject" className="block text-white text-base font-medium mb-2">Subject</label>
+                  <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} required
                     className="w-full bg-[#121212] border border-white/25 text-white px-4 py-3 text-lg focus:outline-none focus:border-purple-600 transition-colors duration-300"
-                    placeholder="What's this about?"
-                  />
+                    placeholder="What's this about?" />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-white text-base font-medium mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows="6"
+                  <label htmlFor="message" className="block text-white text-base font-medium mb-2">Message</label>
+                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows="6"
                     className="w-full bg-[#121212] border border-white/25 text-white px-4 py-3 text-lg focus:outline-none focus:border-purple-600 transition-colors duration-300 resize-none"
-                    placeholder="Your message..."
-                  />
+                    placeholder="Your message..." />
                 </div>
 
-                <button
-                  type="submit"
+                <button type="submit"
                   className="w-full inline-flex items-center justify-center gap-3 bg-purple-600 text-black px-8 py-4 text-lg font-medium transition-all duration-400 hover:bg-purple-500 hover:scale-105"
                 >
                   <Send size={20} />
