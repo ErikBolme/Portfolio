@@ -1,4 +1,4 @@
-// Mock data for Erik's portfolio
+// Portfolio data
 
 export const profileData = {
   name: "Erik Helander Bolme",
