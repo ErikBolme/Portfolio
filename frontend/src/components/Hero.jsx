@@ -38,24 +38,51 @@ const Hero = () => {
       className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden"
       style={{ paddingTop: '80px' }}
     >
+      {/* Gradient background */}
       <div
-        className="absolute inset-0 opacity-10"
+        className="absolute inset-0"
         style={{
-          backgroundImage:
-            'repeating-linear-gradient(0deg, transparent, transparent 1px, #fff 1px, #fff calc(1px + 1px)), repeating-linear-gradient(-90deg, #fff, #fff 1px, transparent 1px, transparent 7.6923%)',
-          backgroundSize: '100% 100%'
+          background: 'radial-gradient(ellipse at 50% 50%, rgba(139,92,246,0.08) 0%, transparent 60%)'
         }}
       />
 
+      {/* Subtle dot grid */}
+      <div
+        className="absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }}
+      />
+
+      {/* Top and bottom fade edges */}
+      <div
+        className="absolute top-0 left-0 right-0 h-32"
+        style={{ background: 'linear-gradient(to bottom, #000 0%, transparent 100%)' }}
+      />
+      <div
+        className="absolute bottom-0 left-0 right-0 h-32"
+        style={{ background: 'linear-gradient(to top, #000 0%, transparent 100%)' }}
+      />
+
+      {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-[7.6923%] text-center">
-        <div className="flex justify-center mb-8 animate-fade-in">
-          <img
-            src="/logo.png"
-            alt="Cybersecurity Logo"
-            className="h-32 w-auto object-contain"
-          />
+        {/* Logo with glow */}
+        <div className="flex justify-center mb-10 animate-fade-in">
+          <div className="relative">
+            <div
+              className="absolute inset-0 blur-2xl opacity-40"
+              style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.6) 0%, transparent 70%)' }}
+            />
+            <img
+              src="/logo.png"
+              alt="Cybersecurity Logo"
+              className="relative h-48 md:h-56 w-auto object-contain drop-shadow-[0_0_30px_rgba(139,92,246,0.4)]"
+            />
+          </div>
         </div>
 
+        {/* Name */}
         <h1
           className="text-white font-semibold mb-4 animate-fade-in-up"
           style={{
@@ -67,6 +94,7 @@ const Hero = () => {
           {profileData.name}
         </h1>
 
+        {/* Typing title */}
         <h2
           className="text-white/85 font-medium mb-6"
           style={{
@@ -81,6 +109,12 @@ const Hero = () => {
           </span>
         </h2>
 
+        {/* Divider line */}
+        <div className="flex justify-center mb-6 animate-fade-in-up" style={{ animationDelay: '0.15s' }}>
+          <div className="w-24 h-[2px] bg-gradient-to-r from-transparent via-purple-600 to-transparent"></div>
+        </div>
+
+        {/* Tagline */}
         <p
           className="text-purple-600 font-semibold tracking-wider mb-10 animate-fade-in-up"
           style={{
@@ -92,10 +126,11 @@ const Hero = () => {
           {profileData.tagline}
         </p>
 
+        {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <button
             onClick={() => scrollToSection('skills')}
-            className="inline-flex items-center justify-between gap-3 bg-purple-600 text-black px-8 py-4 text-lg font-medium transition-all duration-400 hover:bg-purple-500 hover:scale-105 min-w-[200px]"
+            className="inline-flex items-center justify-between gap-3 bg-purple-600 text-black px-8 py-4 text-lg font-medium transition-all duration-400 hover:bg-purple-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(139,92,246,0.4)] min-w-[200px]"
           >
             <span>View Skills</span>
             <ArrowRight size={20} />
@@ -103,7 +138,7 @@ const Hero = () => {
           
           <button
             onClick={() => scrollToSection('contact')}
-            className="inline-flex items-center justify-between gap-3 bg-white/10 text-white px-8 py-4 text-lg font-medium transition-all duration-400 hover:bg-white hover:text-black min-w-[200px]"
+            className="inline-flex items-center justify-between gap-3 bg-white/10 text-white border border-white/20 px-8 py-4 text-lg font-medium transition-all duration-400 hover:bg-white hover:text-black min-w-[200px]"
           >
             <Mail size={20} />
             <span>Contact Me</span>
