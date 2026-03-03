@@ -1,20 +1,30 @@
 import React from 'react';
 import { Github, Code, Shield } from 'lucide-react';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const Projects = () => {
+  const [headerRef, headerVisible] = useScrollAnimation();
+  const [ethicsRef, ethicsVisible] = useScrollAnimation();
+  const [ctaRef, ctaVisible] = useScrollAnimation();
   const projects = [];
 
   return (
-    <section id="projects" className="min-h-screen bg-black py-24 px-[7.6923%]">
+    <section id="projects" className="bg-black py-20 px-[7.6923%]">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div
+          ref={headerRef}
+          className={`text-center mb-14 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
+        >
           <h2 className="text-white text-5xl font-semibold mb-4" style={{ fontFamily: 'monospace', letterSpacing: '-0.02em' }}>
             Active Security Projects
           </h2>
           <div className="w-20 h-1 bg-purple-600 mx-auto"></div>
         </div>
 
-        <div className="mb-16 bg-purple-600/5 border border-purple-600/30 p-8">
+        <div
+          ref={ethicsRef}
+          className={`mb-14 bg-purple-600/5 border border-purple-600/30 p-8 ${ethicsVisible ? 'scroll-visible' : 'scroll-hidden'}`}
+        >
           <div className="flex items-start gap-4">
             <Shield size={32} className="text-purple-600 shrink-0 mt-1" strokeWidth={1.5} />
             <div>
@@ -26,7 +36,10 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div
+          ref={ctaRef}
+          className={`max-w-4xl mx-auto ${ctaVisible ? 'scroll-visible-scale' : 'scroll-hidden-scale'}`}
+        >
           <div className="bg-[#121212] border border-white/25 p-12 text-center">
             <div className="mb-8">
               <Code size={64} className="text-purple-600 mx-auto mb-6" strokeWidth={1.5} />
