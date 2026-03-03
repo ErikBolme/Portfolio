@@ -34,8 +34,14 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-black py-20 px-[7.6923%]">
-      <div className="max-w-6xl mx-auto">
+    <section id="contact" className="relative py-20 px-[7.6923%] overflow-hidden" style={{ background: '#080808' }}>
+      {/* Purple accent glow - bottom right */}
+      <div
+        className="absolute bottom-0 right-0 w-[500px] h-[500px] opacity-20 pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 70%)' }}
+      />
+
+      <div className="relative max-w-6xl mx-auto">
         <div
           ref={headerRef}
           className={`text-center mb-14 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
@@ -61,7 +67,7 @@ const Contact = () => {
             <div className="space-y-6 mb-8">
               <a
                 href={`mailto:${profileData.email}`}
-                className="block bg-[#121212] border border-white/25 p-6 transition-all duration-400 hover:border-purple-600 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.2)] group"
+                className="block bg-[#111111] border border-white/10 p-6 transition-all duration-400 hover:border-purple-600/50 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.15)] group"
               >
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-purple-600/10 border border-purple-600 transition-all duration-400 group-hover:bg-purple-600/20">
@@ -78,7 +84,7 @@ const Contact = () => {
                 href={profileData.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-[#121212] border border-white/25 p-6 transition-all duration-400 hover:border-purple-600 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.2)] group"
+                className="block bg-[#111111] border border-white/10 p-6 transition-all duration-400 hover:border-purple-600/50 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.15)] group"
               >
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-purple-600/10 border border-purple-600 transition-all duration-400 group-hover:bg-purple-600/20">
@@ -91,7 +97,7 @@ const Contact = () => {
                 </div>
               </a>
 
-              <div className="bg-[#121212] border border-white/25 p-6">
+              <div className="bg-[#111111] border border-white/10 p-6">
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-purple-600/10 border border-purple-600">
                     <MapPin size={24} className="text-purple-600" strokeWidth={1.5} />
@@ -136,33 +142,33 @@ const Contact = () => {
                 <div>
                   <label htmlFor="name" className="block text-white text-base font-medium mb-2">Name</label>
                   <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required
-                    className="w-full bg-[#121212] border border-white/25 text-white px-4 py-3 text-lg focus:outline-none focus:border-purple-600 transition-colors duration-300"
+                    className="w-full bg-[#111111] border border-white/10 text-white px-4 py-3 text-lg focus:outline-none focus:border-purple-600 transition-colors duration-300"
                     placeholder="Your Name" />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-white text-base font-medium mb-2">Email</label>
                   <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required
-                    className="w-full bg-[#121212] border border-white/25 text-white px-4 py-3 text-lg focus:outline-none focus:border-purple-600 transition-colors duration-300"
+                    className="w-full bg-[#111111] border border-white/10 text-white px-4 py-3 text-lg focus:outline-none focus:border-purple-600 transition-colors duration-300"
                     placeholder="your.email@example.com" />
                 </div>
 
                 <div>
                   <label htmlFor="subject" className="block text-white text-base font-medium mb-2">Subject</label>
                   <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} required
-                    className="w-full bg-[#121212] border border-white/25 text-white px-4 py-3 text-lg focus:outline-none focus:border-purple-600 transition-colors duration-300"
+                    className="w-full bg-[#111111] border border-white/10 text-white px-4 py-3 text-lg focus:outline-none focus:border-purple-600 transition-colors duration-300"
                     placeholder="What's this about?" />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-white text-base font-medium mb-2">Message</label>
                   <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows="6"
-                    className="w-full bg-[#121212] border border-white/25 text-white px-4 py-3 text-lg focus:outline-none focus:border-purple-600 transition-colors duration-300 resize-none"
+                    className="w-full bg-[#111111] border border-white/10 text-white px-4 py-3 text-lg focus:outline-none focus:border-purple-600 transition-colors duration-300 resize-none"
                     placeholder="Your message..." />
                 </div>
 
                 <button type="submit"
-                  className="w-full inline-flex items-center justify-center gap-3 bg-purple-600 text-black px-8 py-4 text-lg font-medium transition-all duration-400 hover:bg-purple-500 hover:scale-105"
+                  className="w-full inline-flex items-center justify-center gap-3 bg-purple-600 text-black px-8 py-4 text-lg font-medium transition-all duration-400 hover:bg-purple-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(139,92,246,0.4)]"
                 >
                   <Send size={20} />
                   <span>Send Message</span>
