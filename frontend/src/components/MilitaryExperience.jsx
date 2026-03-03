@@ -8,8 +8,14 @@ const MilitaryExperience = () => {
   const [rightRef, rightVisible] = useScrollAnimation();
 
   return (
-    <section id="military-experience" className="bg-black py-20 px-[7.6923%]">
-      <div className="max-w-6xl mx-auto">
+    <section id="military-experience" className="relative bg-black py-20 px-[7.6923%] overflow-hidden">
+      {/* Purple accent glow - right side */}
+      <div
+        className="absolute top-1/2 right-0 w-[500px] h-[500px] -translate-y-1/2 opacity-20 pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%)' }}
+      />
+
+      <div className="relative max-w-6xl mx-auto">
         <div
           ref={headerRef}
           className={`text-center mb-14 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
@@ -25,7 +31,7 @@ const MilitaryExperience = () => {
             ref={leftRef}
             className={`order-2 lg:order-1 ${leftVisible ? 'scroll-visible-left' : 'scroll-hidden-left'}`}
           >
-            <div className="bg-[#121212] border border-white/25 p-8">
+            <div className="bg-[#111111] border border-white/10 p-8 transition-all duration-500 hover:border-purple-600/30">
               <p className="text-white/85 text-lg leading-relaxed mb-6">
                 <span className="text-purple-600 font-semibold">Information Manager (IM)</span>, Norwegian Armed Forces
               </p>
@@ -38,22 +44,22 @@ const MilitaryExperience = () => {
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-4">
-              <div className="bg-purple-600/10 border border-purple-600/30 p-4 transition-all duration-400 hover:bg-purple-600/20">
+              <div className="bg-purple-600/10 border border-purple-600/30 p-4 transition-all duration-400 hover:bg-purple-600/20 hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]">
                 <Lock size={24} className="text-purple-600 mb-2" strokeWidth={1.5} />
                 <h4 className="text-white text-sm font-semibold mb-1">Access Control</h4>
                 <p className="text-white/60 text-xs">RBAC Systems</p>
               </div>
-              <div className="bg-purple-600/10 border border-purple-600/30 p-4 transition-all duration-400 hover:bg-purple-600/20">
+              <div className="bg-purple-600/10 border border-purple-600/30 p-4 transition-all duration-400 hover:bg-purple-600/20 hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]">
                 <Shield size={24} className="text-purple-600 mb-2" strokeWidth={1.5} />
                 <h4 className="text-white text-sm font-semibold mb-1">Security Compliance</h4>
                 <p className="text-white/60 text-xs">Military Standards</p>
               </div>
-              <div className="bg-purple-600/10 border border-purple-600/30 p-4 transition-all duration-400 hover:bg-purple-600/20">
+              <div className="bg-purple-600/10 border border-purple-600/30 p-4 transition-all duration-400 hover:bg-purple-600/20 hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]">
                 <FileCheck size={24} className="text-purple-600 mb-2" strokeWidth={1.5} />
                 <h4 className="text-white text-sm font-semibold mb-1">Information Management</h4>
                 <p className="text-white/60 text-xs">Document Control</p>
               </div>
-              <div className="bg-purple-600/10 border border-purple-600/30 p-4 transition-all duration-400 hover:bg-purple-600/20">
+              <div className="bg-purple-600/10 border border-purple-600/30 p-4 transition-all duration-400 hover:bg-purple-600/20 hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]">
                 <Users size={24} className="text-purple-600 mb-2" strokeWidth={1.5} />
                 <h4 className="text-white text-sm font-semibold mb-1">Platform Administration</h4>
                 <p className="text-white/60 text-xs">Staff Support</p>
