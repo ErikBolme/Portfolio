@@ -53,9 +53,7 @@ lerna-debug.log*
 ehthumbs.db
 Thumbs.db
 
-# Emergent-specific (AI editor files)
-/plugins/
-.emergent/
+# AI editor files
 craco.config.js
 
 # Deployment
