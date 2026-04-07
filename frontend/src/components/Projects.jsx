@@ -1,12 +1,11 @@
 import React from 'react';
-import { Github, Code, Shield } from 'lucide-react';
+import { Github, Shield, Cloud } from 'lucide-react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const Projects = () => {
   const [headerRef, headerVisible] = useScrollAnimation();
   const [ethicsRef, ethicsVisible] = useScrollAnimation();
-  const [ctaRef, ctaVisible] = useScrollAnimation();
-  const projects = [];
+  const [projectRef, projectVisible] = useScrollAnimation();
 
   return (
     <section id="projects" className="relative bg-black py-20 px-[7.6923%] overflow-hidden">
@@ -42,77 +41,66 @@ const Projects = () => {
           </div>
         </div>
 
+        {/* Featured Project Card */}
         <div
-          ref={ctaRef}
-          className={`max-w-4xl mx-auto ${ctaVisible ? 'scroll-visible-scale' : 'scroll-hidden-scale'}`}
+          ref={projectRef}
+          className={`max-w-2xl mx-auto ${projectVisible ? 'scroll-visible-scale' : 'scroll-hidden-scale'}`}
         >
-          <div className="bg-[#111111] border border-white/10 p-12 text-center transition-all duration-500 hover:border-purple-600/30">
-            <div className="mb-8">
-              <Code size={64} className="text-purple-600 mx-auto mb-6" strokeWidth={1.5} />
-              <p className="text-white/85 text-xl leading-relaxed mb-8">
-                Security projects and technical documentation available on GitHub.
-              </p>
-            </div>
-            
-            <a
-              href="https://github.com/ErikBolme"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-4 bg-purple-600 text-black px-12 py-5 text-xl font-semibold transition-all duration-400 hover:bg-purple-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(139,92,246,0.6)] group"
-              style={{ fontFamily: 'monospace' }}
+          <div className="bg-[#111111] border border-white/10 overflow-hidden transition-all duration-500 hover:border-purple-600/50 hover:shadow-[0_8px_40px_rgba(139,92,246,0.15)] group">
+            {/* Project header banner */}
+            <div className="relative h-32 flex items-center justify-center overflow-hidden"
+              style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)' }}
             >
-              <Github size={32} strokeWidth={2} className="group-hover:rotate-12 transition-transform duration-400" />
-              <span>View My GitHub Profile</span>
-            </a>
+              <div className="absolute inset-0 opacity-20"
+                style={{ background: 'radial-gradient(circle at 50% 50%, rgba(139,92,246,0.3) 0%, transparent 70%)' }}
+              />
+              <Cloud size={48} className="text-purple-500 relative z-10" strokeWidth={1.5} />
+            </div>
 
-            <div className="mt-8 flex items-center justify-center gap-2 text-white/40 text-sm">
-              <div className="w-2 h-2 bg-purple-600 rounded-full animate-pulse"></div>
-              <span>Actively Contributing</span>
+            {/* Project info */}
+            <div className="p-8">
+              <div className="flex items-center gap-2 mb-3">
+                <Github size={18} className="text-white/60" strokeWidth={1.5} />
+                <h3 className="text-white text-2xl font-semibold" style={{ fontFamily: 'monospace' }}>
+                  azure-cloud-security-lab
+                </h3>
+              </div>
+
+              <p className="text-white/70 text-lg leading-relaxed mb-5">
+                Cloud security lab environment built in Microsoft Azure for hands-on security testing, monitoring, and incident response.
+              </p>
+
+              <div className="flex items-center gap-3 mb-8">
+                <span className="px-3 py-1 bg-blue-600/20 border border-blue-500/40 text-blue-400 text-sm font-medium">
+                  Azure
+                </span>
+                <span className="px-3 py-1 bg-purple-600/20 border border-purple-500/40 text-purple-400 text-sm font-medium">
+                  Cloud Security
+                </span>
+                <div className="flex items-center gap-1.5 ml-auto">
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></div>
+                  <span className="text-white/40 text-sm">In Progress</span>
+                </div>
+              </div>
+
+              <a
+                href="https://github.com/ErikBolme/azure-cloud-security-lab"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-3 bg-purple-600 text-black px-8 py-4 text-lg font-semibold transition-all duration-400 hover:bg-purple-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)]"
+                style={{ fontFamily: 'monospace' }}
+              >
+                <Github size={22} strokeWidth={2} />
+                <span>View Project on GitHub</span>
+              </a>
             </div>
           </div>
         </div>
 
-        {projects.length > 0 && (
-          <div className="mt-16">
-            <h3 className="text-white text-3xl font-semibold mb-8 text-center" style={{ fontFamily: 'monospace' }}>
-              Featured Projects
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {projects.map((project, index) => {
-                const Icon = project.icon;
-                return (
-                  <div
-                    key={index}
-                    className="bg-[#111111] border border-white/10 p-8 transition-all duration-400 hover:border-purple-600/50 hover:translate-y-[-4px] hover:shadow-[0_8px_32px_rgba(139,92,246,0.15)] group"
-                  >
-                    <div className="mb-6 flex justify-center">
-                      <div className="p-4 bg-purple-600/10 border border-purple-600 transition-all duration-400 group-hover:bg-purple-600/20">
-                        <Icon size={40} className="text-purple-600" strokeWidth={1.5} />
-                      </div>
-                    </div>
-                    <h3 className="text-white text-xl font-semibold mb-3 text-center" style={{ fontFamily: 'monospace' }}>
-                      {project.title}
-                    </h3>
-                    <p className="text-white/70 text-base leading-relaxed mb-6 text-center">
-                      {project.description}
-                    </p>
-                    <div className="flex justify-center">
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600/20 border border-purple-600 text-purple-600 text-sm font-medium hover:bg-purple-600 hover:text-black transition-all duration-400"
-                      >
-                        <Github size={18} />
-                        View Repository
-                      </a>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
+        {/* More projects coming */}
+        <div className="mt-10 text-center">
+          <p className="text-white/30 text-sm uppercase tracking-wider">More projects coming soon</p>
+        </div>
       </div>
     </section>
   );
