@@ -20,11 +20,11 @@ function App() {
         <SectionDivider />
         <About />
         <SectionDivider flip />
-        <MilitaryExperience />
+        <Projects />
         <SectionDivider />
         <Skills />
         <SectionDivider flip />
-        <Projects />
+        <MilitaryExperience />
         <SectionDivider />
         <Contact />
       </main>

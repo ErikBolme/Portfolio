@@ -7,7 +7,7 @@ const About = () => {
   const [contentRef, contentVisible] = useScrollAnimation();
 
   return (
-    <section id="about" className="relative py-20 px-[7.6923%] overflow-hidden" style={{ background: '#080808' }}>
+    <section id="about" className="relative py-12 px-[7.6923%] overflow-hidden" style={{ background: '#080808' }}>
       {/* Purple accent glow - top left */}
       <div
         className="absolute top-0 left-0 w-96 h-96 opacity-30 pointer-events-none"
@@ -17,7 +17,7 @@ const About = () => {
       <div className="relative max-w-6xl mx-auto">
         <div
           ref={headerRef}
-          className={`text-center mb-12 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
+          className={`text-center mb-6 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
         >
           <h2 className="text-white text-5xl font-semibold mb-4" style={{ letterSpacing: '-0.02em' }}>
             About Me
